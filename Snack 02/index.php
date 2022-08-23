@@ -14,19 +14,12 @@
         Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato"
     </p>
 
-    <?php 
-        $name = $_GET['name'];
-        $mail = $_GET['mail'];
-        $age = $_GET['age'];
-
-        if ( (strlen($name) > 3)
-            && ( strpos($mail, '@') > 0 && strpos($mail, '.') > 3)
-            && ( is_numeric($age)) ){
-                echo "Accesso riuscito";
-            } else {
-                echo "Accesso negato";
-            }
-    ?>
+    <form action="welcome_get.php" method="get">
+        Name: <input type="text" name="name"><br><br>
+        E-mail: <input type="email" name="email"><br><br>
+        Age: <input type="text" name="age"><br><br>
+        <input type="submit">
+    </form>
 
 </body>
 </html>
